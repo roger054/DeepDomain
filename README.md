@@ -11,8 +11,7 @@
 ║ Open Source - Contributions Welcome ║
 ╚══════════════════════════════════════════════════════════════╝
 
-نس
-تحرير
+
 
 DeepDomain is a powerful subdomain enumeration tool designed for red teams, researchers, and professional bug bounty hunters. It combines multiple techniques to discover and fingerprint subdomains efficiently and effectively.
 
@@ -42,8 +41,7 @@ pip install -r requirements.txt
 
 ⚡ Quick Usage
 bash
-نسخ
-تحرير
+
 py deepdomain.py example.com              # Basic scan
 py deepdomain.py example.com --fast       # Fast scan
 py deepdomain.py example.com --deep       # Deep scan
@@ -81,5 +79,4 @@ This tool is intended for authorized security testing and research purposes only
 Using DeepDomain on networks or domains without permission is illegal and unethical.
 
 
-نسخ
-تحرير
+
