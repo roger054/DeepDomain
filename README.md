@@ -1,43 +1,85 @@
-DeepDomain
-Advanced Subdomain Enumeration Tool
+ DeepDomain v2.0 — Advanced Subdomain Enumeration Tool
 
-DeepDomain is a powerful and flexible open-source tool designed to perform comprehensive subdomain enumeration. It integrates multiple techniques including DNS brute forcing, certificate transparency logs, API data sources, and HTTP fingerprinting to discover and verify subdomains efficiently.
+╔══════════════════════════════════════════════════════════════╗
+║ DeepDomain v2.0 ║
+║ Advanced Subdomain Enumeration Tool ║
+║ ║
+║ 🔍 DNS Brute Force 📜 Certificate Transparency ║
+║ 🌐 API Integration 🔍 HTTP Fingerprinting ║
+║ ║
+║ Created by: Soheil Manna ║
+║ Open Source - Contributions Welcome ║
+╚══════════════════════════════════════════════════════════════╝
 
-Features
-🔍 DNS Brute Force: Perform high-speed subdomain enumeration using custom wordlists.
+نس
+تحرير
 
-📜 Certificate Transparency Logs: Leverage public CT logs to find issued certificates linked to your target domains.
+DeepDomain is a powerful subdomain enumeration tool designed for red teams, researchers, and professional bug bounty hunters. It combines multiple techniques to discover and fingerprint subdomains efficiently and effectively.
 
-🌐 API Integration: Use external APIs for enriched domain discovery and verification.
+---
 
-🔍 HTTP Fingerprinting: Identify live hosts and technologies used by discovered subdomains.
+##  Features
 
-⚡ Fast and Customizable: Easily configure wordlists, APIs, and scanning options to fit your recon needs.
+- 🔍 **DNS brute-force** with smart wordlists  
+- 📜 **Certificate Transparency** parsing  
+- 🌐 **API integration** with 3rd-party services  
+- 🧠 **HTTP fingerprinting** for discovered subdomains  
+- ⚡ **Fast mode** (lightweight DNS only)  
+- 🧬 **Deep mode** (brute-force + APIs + CT logs)  
+- 📂 Organized output and threading control  
+- 🖥️ Clean terminal interface
 
-Installation
-bash
+---
+
+## 📦 Installation
+
+```bash
 git clone https://github.com/roger054/DeepDomain.git
 cd DeepDomain
 pip install -r requirements.txt
-py install.py
-Usage
-Basic usage example:
+✅ Python 3.x required
+✅ Compatible with Linux, Windows (py instead of python), and macOS
 
+⚡ Quick Usage
 bash
+نسخ
+تحرير
+py deepdomain.py example.com              # Basic scan
+py deepdomain.py example.com --fast       # Fast scan
+py deepdomain.py example.com --deep       # Deep scan
+py deepdomain.py example.com --no-save    # Don't save results
+🔧 Options
+Flag / Option	Description
+domain	Target domain (e.g., example.com)
+--fast	Fast scan (DNS only, 22 prefixes)
+--deep	Deep scan (all techniques, 252+ prefixes)
+-t, --threads	Number of threads (default: 50)
+--no-save	Don’t save results to output directory
+-o, --output	Output directory (default: output)
+--version	Show tool version
+-h, --help	Show help and exit
 
-py deepdomain.py -d example.com -w subdomains.txt
-Options include specifying wordlists, output formats, and scan types. See the Wiki for detailed documentation.
+📂 Output
+Results will be saved in an output/ folder by default, including:
 
-Requirements
-Python 3.8+
+Discovered subdomains
 
-Dependencies listed in requirements.txt
+Status codes, titles, technologies
 
-Contributing
-Contributions and improvements are welcome! Feel free to fork the repo, submit pull requests, or open issues with feature requests or bug reports.
+CVE and risk assessments
 
-License
-This project is licensed under the MIT License — see the LICENSE file for details.
+DNS and fingerprinting data
 
-Contact
-Created by Soheil Manna - @roger054 — reach out for support or collaboration.
+ Author
+Soheil Manna
+GitHub: @roger054
+Open Source — Contributions Welcome 
+License: MIT
+
+🛡️ Disclaimer
+This tool is intended for authorized security testing and research purposes only.
+Using DeepDomain on networks or domains without permission is illegal and unethical.
+
+
+نسخ
+تحرير
